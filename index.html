@@ -2,408 +2,1019 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professional portfolio in marketing operations, project coordination, continuous improvement and business process analysis.">
-  <title>Professional Portfolio | Marketing & Business Operations</title>
-  <style>
-    :root {
-      --bg: #f7f8fa;
-      --surface: #ffffff;
-      --ink: #172338;
-      --muted: #667085;
-      --accent: #3976d4;
-      --line: #e3e8ef;
-      --soft: #edf3fc;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10233f">
+<meta name="description" content="Fabian Balboa Quinteros — Marketing Operations, Project Coordination, Process Improvement and Digital Transformation.">
+<title>Fabian Balboa Quinteros | Professional Portfolio</title>
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.7;
-    }
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(1080px, 90%); margin: auto; }
+<style>
+:root {
+  --navy: #10233f;
+  --navy2: #203b5e;
+  --blue: #587da6;
+  --ink: #243247;
+  --muted: #687589;
+  --paper: #f5f6f8;
+  --white: #ffffff;
+  --line: #e0e5eb;
+  --pale: #edf2f7;
+  --radius: 18px;
+  --max: 1120px;
+}
 
-    header {
-      background: rgba(255,255,255,.94);
-      border-bottom: 1px solid var(--line);
-    }
-    nav {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-    .brand { font-weight: 800; letter-spacing: -.5px; }
-    .brand span { color: var(--accent); }
-    .nav-links { display: flex; gap: 24px; font-size: .9rem; }
-    .nav-links a:hover, .text-link:hover { color: var(--accent); }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-    .hero { padding: 100px 0 84px; }
-    .eyebrow {
-      color: var(--accent);
-      text-transform: uppercase;
-      font-size: .76rem;
-      letter-spacing: 2px;
-      font-weight: 800;
-    }
-    h1 {
-      max-width: 850px;
-      font-size: clamp(2.7rem, 6vw, 5rem);
-      line-height: 1.08;
-      letter-spacing: -3px;
-      margin: 20px 0;
-    }
-    h1 span { color: var(--accent); }
-    .intro { max-width: 690px; color: var(--muted); font-size: 1.12rem; }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
-    .button {
-      display: inline-block;
-      padding: 12px 20px;
-      border-radius: 7px;
-      font-weight: 700;
-      font-size: .92rem;
-      border: 1px solid var(--ink);
-    }
-    .primary { background: var(--ink); color: white; }
-    .primary:hover { background: var(--accent); border-color: var(--accent); }
-    .secondary { background: transparent; }
-    .secondary:hover { background: var(--surface); }
+html { scroll-behavior: smooth; scroll-padding-top: 85px; }
 
-    .focus-strip {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border: 1px solid var(--line);
-      background: var(--surface);
-      border-radius: 12px;
-      margin-top: 20px;
-      overflow: hidden;
-    }
-    .focus-item { padding: 22px 18px; border-right: 1px solid var(--line); }
-    .focus-item:last-child { border-right: 0; }
-    .focus-item strong { display: block; font-size: .95rem; }
-    .focus-item span { color: var(--muted); font-size: .8rem; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
 
-    section { padding: 76px 0; }
-    .section-heading { margin-bottom: 30px; }
-    .section-heading h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); margin: 8px 0; letter-spacing: -1px; }
-    .section-heading p { color: var(--muted); max-width: 650px; margin: 0; }
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-    }
-    .project {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 28px;
-      transition: transform .2s, box-shadow .2s;
-    }
-    .project:hover { transform: translateY(-3px); box-shadow: 0 12px 32px #1723380c; }
-    .project-number { color: var(--accent); font-weight: 800; font-size: .8rem; }
-    .project h3 { font-size: 1.25rem; line-height: 1.4; margin: 12px 0 8px; }
-    .project p { color: var(--muted); font-size: .94rem; }
-    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
-    .tag { background: var(--soft); color: #28558e; border-radius: 4px; padding: 5px 9px; font-size: .75rem; }
+a { color: inherit; text-decoration: none; }
+a:hover { color: var(--blue); }
+img { display: block; max-width: 100%; }
 
-    .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: start; }
-    .about-copy p { color: var(--muted); }
-    .principles { display: grid; gap: 12px; }
-    .principle { padding: 17px 20px; border: 1px solid var(--line); background: var(--surface); border-radius: 9px; }
-    .principle strong { display: block; }
-    .principle span { font-size: .9rem; color: var(--muted); }
+.container { width: min(var(--max), calc(100% - 40px)); margin: auto; }
+.section { padding: 82px 0; }
+.white { background: var(--white); }
 
-    .skills { display: flex; flex-wrap: wrap; gap: 10px; }
-    .skill { padding: 9px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; font-size: .9rem; }
+.eyebrow {
+  color: var(--blue);
+  text-transform: uppercase;
+  font-size: .75rem;
+  letter-spacing: .17em;
+  font-weight: 750;
+  margin-bottom: 14px;
+}
 
-    .contact-panel {
-      background: #172338;
-      color: white;
-      border-radius: 14px;
-      padding: clamp(28px, 5vw, 56px);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 28px;
-    }
-    .contact-panel h2 { font-size: clamp(1.8rem, 4vw, 2.7rem); line-height: 1.2; margin: 8px 0 12px; }
-    .contact-panel p { color: #c5cfdd; max-width: 560px; }
-    .contact-panel .button { color: white; border-color: #8294ad; white-space: nowrap; }
-    .contact-panel .button:hover { background: var(--accent); border-color: var(--accent); }
-    footer { padding: 28px 0; color: var(--muted); font-size: .84rem; }
-    .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+h1, h2, h3, h4 { color: var(--navy); line-height: 1.22; letter-spacing: -.025em; }
+h1 { font-size: clamp(2.5rem, 5.5vw, 4.5rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 18px; }
+h3 { font-size: 1.28rem; margin-bottom: 12px; }
+h4 { font-size: 1rem; margin: 20px 0 8px; }
+p { margin-bottom: 15px; }
 
-    @media (max-width: 720px) {
-      .nav-links { gap: 12px; font-size: .8rem; }
-      .hero { padding: 68px 0 55px; }
-      h1 { letter-spacing: -1.5px; }
-      .focus-strip { grid-template-columns: repeat(2, 1fr); }
-      .focus-item:nth-child(2) { border-right: 0; }
-      .focus-item:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
-      .projects, .about-grid { grid-template-columns: 1fr; }
-      .contact-panel { align-items: flex-start; flex-direction: column; }
-    }
-    @media (max-width: 430px) {
-      .brand { font-size: .9rem; }
-      .nav-links { gap: 9px; }
-      .nav-links a { font-size: .76rem; }
-      .project { padding: 22px; }
-    }
-  </style>
+.intro { color: var(--muted); max-width: 720px; font-size: 1.04rem; margin-bottom: 35px; }
+.small { color: var(--muted); font-size: .84rem; }
+.muted { color: var(--muted); }
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-inner {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+.brand { font-size: .93rem; font-weight: 800; color: var(--navy); white-space: nowrap; }
+.nav-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-end; }
+.nav-links a { color: var(--muted); font-size: .82rem; font-weight: 650; }
+.nav-links a:hover { color: var(--navy); }
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--navy);
+  border-radius: 7px;
+  padding: 12px 19px;
+  font-size: .88rem;
+  font-weight: 700;
+  transition: .2s;
+}
+.button-primary { background: var(--navy); color: white; }
+.button-primary:hover { background: var(--navy2); color: white; transform: translateY(-1px); }
+.button-outline { color: var(--navy); }
+.button-outline:hover { background: var(--navy); color: white; }
+
+.hero {
+  padding: 86px 0 72px;
+  background: radial-gradient(ellipse at 85% 15%, #e0eaf3 0, transparent 38%), white;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.45fr .75fr;
+  gap: 62px;
+  align-items: center;
+}
+
+.hero h1 span { display: block; color: var(--blue); }
+.hero-text { font-size: 1.1rem; color: var(--muted); margin: 24px 0; max-width: 670px; }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 25px; }
+.tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 24px; }
+.tag { background: var(--pale); color: var(--navy2); border-radius: 5px; padding: 6px 10px; font-size: .75rem; font-weight: 650; }
+
+.profile-frame { width: 100%; max-width: 335px; margin-left: auto; }
+.profile-photo, .placeholder.profile {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 170px 170px 15px 15px;
+}
+.profile-caption { text-align: center; margin-top: 14px; color: var(--muted); font-size: .84rem; }
+
+.placeholder {
+  min-height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  text-align: center;
+  color: #50647a;
+  font-size: .88rem;
+  background: linear-gradient(145deg, #e9eef3, #d9e3ec);
+  border: 1px dashed #9eafc1;
+  border-radius: var(--radius);
+}
+
+.placeholder.profile { min-height: 0; border-radius: 170px 170px 15px 15px; }
+
+.highlights { background: var(--navy); color: white; padding: 26px 0; }
+.highlight-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.highlight { border-left: 2px solid #607b99; padding-left: 15px; }
+.highlight strong { display: block; color: white; font-size: 1.2rem; }
+.highlight span { color: #d2dce8; font-size: .8rem; }
+
+.grid-2, .grid-3 { display: grid; gap: 23px; }
+.grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+.grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+
+.card, .case {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.card-body { padding: 24px; }
+.card p, .case p { color: var(--muted); font-size: .94rem; }
+
+.label {
+  display: block;
+  color: var(--blue);
+  font-size: .71rem;
+  font-weight: 750;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: 11px;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 7px;
+  color: var(--navy);
+  font-weight: 750;
+  font-size: .85rem;
+  border-bottom: 1px solid #b7c7d7;
+}
+
+.link:hover { border-color: var(--navy); }
+
+.bullets { padding-left: 19px; color: var(--muted); font-size: .92rem; margin: 12px 0; }
+.bullets li { margin-bottom: 7px; }
+
+.case { margin-bottom: 27px; }
+.case-header { padding: 30px 32px 23px; border-bottom: 1px solid var(--line); }
+.case-content { padding: 28px 32px 32px; }
+.case-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 34px; }
+.aside { background: #f3f6f9; padding: 21px; border-radius: 12px; align-self: start; }
+
+.metric-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin: 17px 0; }
+.metric { background: #edf2f7; border-radius: 9px; padding: 13px; }
+.metric strong { display: block; font-size: 1rem; color: var(--navy); }
+.metric span { display: block; font-size: .75rem; color: var(--muted); margin-top: 4px; }
+
+.gallery { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; margin-top: 18px; }
+.gallery img, .gallery .placeholder { width: 100%; aspect-ratio: 4 / 3; min-height: 0; object-fit: cover; border-radius: 11px; }
+
+.browser-wrap { background: #eaf0f5; padding: 20px; display: flex; align-items: center; }
+.browser { width: 100%; background: white; border: 1px solid #d3dce5; border-radius: 8px; overflow: hidden; }
+.browser-top { background: #f3f5f7; padding: 9px 12px; font-size: .7rem; color: #78879a; overflow-wrap: anywhere; }
+.browser-screen { padding: 17px; }
+.browser-line { height: 7px; width: 72%; background: #e1e8ef; border-radius: 4px; margin-bottom: 9px; }
+.browser-line.short { width: 43%; }
+.browser-block { height: 45px; background: #d7e3ee; border-radius: 5px; margin-top: 12px; }
+
+.web-links, .social-links { display: flex; gap: 10px 14px; flex-wrap: wrap; margin-top: 15px; }
+.web-links a { color: var(--navy); font-weight: 700; font-size: .82rem; border-bottom: 1px solid #b7c7d7; }
+.social-links a { background: white; border: 1px solid var(--line); border-radius: 6px; padding: 8px 11px; font-size: .83rem; font-weight: 700; }
+
+.table-wrap { overflow-x: auto; margin: 20px 0; }
+table { width: 100%; border-collapse: collapse; background: white; font-size: .88rem; }
+th, td { padding: 12px 14px; border-bottom: 1px solid var(--line); text-align: left; }
+th { background: #edf2f7; color: var(--navy); }
+td { color: var(--muted); }
+
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 42px; }
+.skill-group { margin-bottom: 23px; }
+.skill-group h3 { font-size: 1rem; }
+.skill-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.skill-tags span { border: 1px solid var(--line); background: white; padding: 7px 10px; border-radius: 6px; font-size: .81rem; }
+
+.contact-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+  padding: 44px;
+  border-radius: 19px;
+  background: var(--navy);
+  color: white;
+}
+.contact-panel h2 { color: white; }
+.contact-panel p { color: #d2dce8; max-width: 610px; margin-bottom: 0; }
+.contact-panel .button { background: white; color: var(--navy); border-color: white; white-space: nowrap; }
+.contact-panel .button:hover { background: #e8eef5; }
+
+footer { text-align: center; padding: 24px 0; color: var(--muted); font-size: .8rem; }
+
+@media (max-width: 850px) {
+  .nav-inner { align-items: flex-start; flex-direction: column; padding: 14px 0; gap: 12px; }
+  .nav-links { justify-content: flex-start; gap: 10px 16px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 35px; }
+  .profile-frame { max-width: 260px; margin: 0; }
+  .highlight-grid { grid-template-columns: repeat(2,1fr); }
+  .case-grid, .about-grid { grid-template-columns: 1fr; gap: 20px; }
+  .contact-panel { flex-direction: column; align-items: flex-start; padding: 32px; }
+}
+
+@media (max-width: 560px) {
+  .container { width: calc(100% - 30px); }
+  .section { padding: 58px 0; }
+  .hero { padding: 55px 0; }
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  .gallery { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .case-header, .case-content { padding: 22px 19px; }
+  .metric-grid { grid-template-columns: 1fr; }
+  .contact-panel { padding: 27px 22px; }
+  .actions .button { width: 100%; }
+}
+</style>
 </head>
+
 <body>
 
-  <header>
-    <nav class="container">
-      <a class="brand" href="#home">PORTFOLIO<span>.</span></a>
-      <div class="nav-links">
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#skills">Expertise</a>
-        <a href="#contact">Contact</a>
-      </div>
+<header class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="#home">FABIAN BALBOA QUINTEROS</a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#case-studies">Case Studies</a>
+      <a href="#web-projects">Web Projects</a>
+      <a href="#marketing">Marketing</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <section class="hero container" id="home">
-      <div class="eyebrow">Marketing · Projects · Business Operations</div>
-      <h1>Turning business challenges into <span>organized, measurable progress.</span></h1>
-      <p class="intro">
-        Business Administration professional focused on marketing operations,
-        project coordination, continuous improvement and data-informed decision-making.
-        I connect strategy with structured execution to help teams work better.
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">Professional Portfolio · Bolivia</p>
+      <h1>Marketing Operations <span>& Project Coordinator</span></h1>
+
+      <p class="hero-text">
+        I connect marketing strategy, project coordination and process
+        improvement to help organizations work more efficiently,
+        communicate effectively and make better operational decisions.
       </p>
+
+      <p>
+        My experience spans healthcare marketing, digital projects,
+        workflow digitalization, management systems and continuous improvement.
+      </p>
+
       <div class="actions">
-        <a class="button primary" href="#projects">Explore my projects ↗</a>
-        <a class="button secondary" href="#contact">Let's connect</a>
+        <a class="button button-primary" href="#contact">Let's Work Together →</a>
+        <a class="button button-outline" href="#case-studies">Explore My Work</a>
       </div>
 
-      <div class="focus-strip">
-        <div class="focus-item">
-          <strong>Marketing</strong>
-          <span>Strategy & operations</span>
-        </div>
-        <div class="focus-item">
-          <strong>Project Management</strong>
-          <span>Planning & coordination</span>
-        </div>
-        <div class="focus-item">
-          <strong>Process Improvement</strong>
-          <span>Workflows & quality</span>
-        </div>
-        <div class="focus-item">
-          <strong>Business Analysis</strong>
-          <span>Structured decisions</span>
-        </div>
+      <div class="tags">
+        <span class="tag">Project Coordination</span>
+        <span class="tag">Marketing Operations</span>
+        <span class="tag">Process Improvement</span>
+        <span class="tag">Digital Transformation</span>
       </div>
-    </section>
-
-    <section id="projects">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Selected work</div>
-          <h2>Projects & Case Studies</h2>
-          <p>
-            A selection of professional experiences across healthcare marketing,
-            business operations and continuous improvement. Detailed case studies
-            will include project context, my contribution and documented deliverables.
-          </p>
-        </div>
-
-        <div class="projects">
-          <article class="project">
-            <div class="project-number">01 / MARKETING STRATEGY</div>
-            <h3>Corporate Marketing & Brand Development</h3>
-            <p>
-              Salur SRL · Healthcare sector
-            </p>
-            <p>
-              National marketing coordination, corporate communication,
-              digital channel management and brand positioning in a
-              business-to-business healthcare environment.
-            </p>
-            <div class="tags">
-              <span class="tag">Marketing Operations</span>
-              <span class="tag">Brand Strategy</span>
-              <span class="tag">Healthcare</span>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-number">02 / CONTINUOUS IMPROVEMENT</div>
-            <h3>5S Continuous Improvement Proposal</h3>
-            <p>
-              Corporación COFAR S.A. · Business operations
-            </p>
-            <p>
-              Development and company-wide presentation of a 5S improvement
-              proposal addressing commercial, administrative and production areas.
-            </p>
-            <div class="tags">
-              <span class="tag">5S</span>
-              <span class="tag">Process Improvement</span>
-              <span class="tag">Stakeholder Communication</span>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-number">03 / BUSINESS OPERATIONS</div>
-            <h3>Process Mapping & Workflow Automation</h3>
-            <p>
-              Corporación COFAR S.A. · Process management
-            </p>
-            <p>
-              Experience supporting commercial process analysis, organizational
-              documentation and workflow automation using Microsoft 365.
-            </p>
-            <div class="tags">
-              <span class="tag">Process Mapping</span>
-              <span class="tag">Microsoft 365</span>
-              <span class="tag">Documentation</span>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-number">04 / PROJECT COORDINATION</div>
-            <h3>Medical Events & Education Coordination</h3>
-            <p>
-              Salur SRL · Healthcare marketing
-            </p>
-            <p>
-              Coordination of medical congresses, workshops, suppliers,
-              promotional materials and educational activities for healthcare
-              professionals.
-            </p>
-            <div class="tags">
-              <span class="tag">Project Coordination</span>
-              <span class="tag">Event Operations</span>
-              <span class="tag">Logistics</span>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-number">05 / OPERATIONAL EFFICIENCY</div>
-            <h3>Continuous Improvement Project</h3>
-            <p>
-              Banco BISA S.A. · Banking
-            </p>
-            <p>
-              Experience supporting a continuous improvement initiative.
-              The project scope, methods and documented outcomes will be
-              added after the case details are verified.
-            </p>
-            <div class="tags">
-              <span class="tag">Continuous Improvement</span>
-              <span class="tag">Business Analysis</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="container about-grid">
-        <div class="about-copy">
-          <div class="eyebrow">About me</div>
-          <h2>Strategy with an operational mindset.</h2>
-          <p>
-            I hold a degree in Business Administration, with a strong academic
-            background and experience across marketing, process management,
-            documentation, quality systems and continuous improvement.
-          </p>
-          <p>
-            My approach combines analytical thinking, organization and clear
-            communication. I enjoy connecting people, processes and information
-            to move projects from planning to execution.
-          </p>
-          <p>
-            I am particularly interested in remote opportunities where I can
-            support international teams through marketing operations,
-            project coordination and business process improvement.
-          </p>
-        </div>
-        <div class="principles">
-          <div class="principle">
-            <strong>Structured execution</strong>
-            <span>Organizing tasks, deliverables and workflows.</span>
-          </div>
-          <div class="principle">
-            <strong>Continuous improvement</strong>
-            <span>Identifying opportunities to improve processes.</span>
-          </div>
-          <div class="principle">
-            <strong>Analytical thinking</strong>
-            <span>Using information to support better decisions.</span>
-          </div>
-          <div class="principle">
-            <strong>Cross-functional coordination</strong>
-            <span>Connecting teams, suppliers and stakeholders.</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Core competencies</div>
-          <h2>Skills & Tools</h2>
-          <p>
-            A combination of business, operational and digital capabilities.
-            Tools and proficiency levels will be refined as the portfolio develops.
-          </p>
-        </div>
-        <div class="skills">
-          <span class="skill">Marketing Strategy</span>
-          <span class="skill">Marketing Operations</span>
-          <span class="skill">Project Coordination</span>
-          <span class="skill">Process Mapping</span>
-          <span class="skill">Continuous Improvement</span>
-          <span class="skill">5S Methodology</span>
-          <span class="skill">Business Analysis</span>
-          <span class="skill">Microsoft 365</span>
-          <span class="skill">WordPress</span>
-          <span class="skill">Odoo</span>
-          <span class="skill">Digital Marketing</span>
-          <span class="skill">Documentation Management</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <div class="contact-panel">
-          <div>
-            <div class="eyebrow">Let's work together</div>
-            <h2>Have a project in mind?</h2>
-            <p>
-              I am interested in collaborating on marketing operations,
-              project coordination, process improvement and business support
-              projects with teams looking for structured, reliable execution.
-            </p>
-          </div>
-          <a class="button" href="https://www.upwork.com/" target="_blank" rel="noopener noreferrer">
-            Find me on Upwork ↗
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <span>Professional Portfolio</span>
-      <span>Marketing · Projects · Business Operations</span>
     </div>
-  </footer>
+
+    <div class="profile-frame">
+      <!-- PHOTO: upload assets/profile.jpg and replace this placeholder -->
+      <div class="placeholder profile">
+        <div>
+          <strong>YOUR PROFESSIONAL PHOTO</strong>
+          <p class="small">Replace this block with assets/profile.jpg</p>
+        </div>
+      </div>
+      <p class="profile-caption">Fabian Balboa Quinteros · Marketing & Operations</p>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section class="highlights">
+  <div class="container highlight-grid">
+    <div class="highlight"><strong>94.6 / 100</strong><span>Academic average</span></div>
+    <div class="highlight"><strong>National</strong><span>Marketing coordination</span></div>
+    <div class="highlight"><strong>Cross-functional</strong><span>Projects & process experience</span></div>
+    <div class="highlight"><strong>Healthcare</strong><span>Medical marketing experience</span></div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="section" id="case-studies">
+  <div class="container">
+    <p class="eyebrow">Selected Work</p>
+    <h2>Case Studies</h2>
+    <p class="intro">
+      Examples of how I approach operational challenges, improve internal
+      workflows and coordinate initiatives that connect people, processes
+      and business objectives.
+    </p>
+
+    <!-- COFAR 5S -->
+    <article class="case">
+      <div class="case-header">
+        <span class="label">01 · Continuous Improvement</span>
+        <h3>5S & Continuous Improvement Training</h3>
+        <p>Corporación COFAR S.A. · Training Design & Delivery</p>
+        <div class="tags">
+          <span class="tag">5S Methodology</span>
+          <span class="tag">Internal Training</span>
+          <span class="tag">Process Improvement</span>
+        </div>
+      </div>
+
+      <div class="case-content">
+        <div class="case-grid">
+          <div>
+            <h4>Context</h4>
+            <p>
+              In preparation for ISO audits, the organization needed to
+              reinforce awareness of 5S, workplace organization and
+              continuous improvement across different business areas.
+            </p>
+
+            <h4>My Contribution</h4>
+            <p>
+              I independently designed and delivered internal training,
+              adapting practical examples to production, administrative
+              and commercial teams.
+            </p>
+
+            <ul class="bullets">
+              <li>Developed training content around the 5S principles.</li>
+              <li>Explained applications for different work environments.</li>
+              <li>Connected workplace organization with process consistency,
+                  cleanliness and team efficiency.</li>
+              <li>Delivered training across multiple organizational areas.</li>
+            </ul>
+
+            <h4>Outcome</h4>
+            <p>
+              The initiative expanded internal awareness of 5S and
+              continuous improvement across the areas covered. Post-training
+              implementation and quantified operational impact have not
+              been independently verified.
+            </p>
+          </div>
+
+          <aside class="aside">
+            <h4>Project Snapshot</h4>
+            <div class="metric-grid">
+              <div class="metric"><strong>500+</strong><span>People, approximate recollection</span></div>
+              <div class="metric"><strong>~2 weeks</strong><span>Approximate duration</span></div>
+              <div class="metric"><strong>3</strong><span>Business areas</span></div>
+            </div>
+            <h4>Areas Covered</h4>
+            <ul class="bullets">
+              <li>Production</li><li>Administration</li><li>Commercial</li>
+            </ul>
+            <p class="small">
+              Audience and duration figures are approximate recollections,
+              not independently verified records.
+            </p>
+          </aside>
+        </div>
+
+        <h4>Project Evidence</h4>
+        <div class="gallery">
+          <!-- Replace placeholders with authorized photos -->
+          <div class="placeholder">COFAR 5S training photo</div>
+          <div class="placeholder">Training presentation</div>
+          <div class="placeholder">Workplace organization example</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- COFAR HR WORKFLOW -->
+    <article class="case">
+      <div class="case-header">
+        <span class="label">02 · Digital Transformation</span>
+        <h3>HR Permission Workflow Digitalization</h3>
+        <p>Corporación COFAR S.A. · Microsoft Teams Approvals</p>
+        <div class="tags">
+          <span class="tag">Workflow Digitalization</span>
+          <span class="tag">Microsoft 365</span>
+          <span class="tag">HR Operations</span>
+        </div>
+      </div>
+
+      <div class="case-content">
+        <div class="case-grid">
+          <div>
+            <h4>The Challenge</h4>
+            <p>
+              Hourly employee permission requests were handled through
+              paper forms. Documents could be delayed, lost or signed
+              without reaching Human Resources. Missing records often
+              led to follow-up and administrative rework at month-end.
+            </p>
+
+            <h4>My Role & Solution</h4>
+            <p>
+              I independently developed a digital approval workflow
+              using Microsoft Teams Approvals, as part of an effort to
+              digitalize internal processes through Microsoft 365.
+            </p>
+
+            <ul class="bullets">
+              <li>Established a centralized digital request process.</li>
+              <li>Routed requests to the employee's immediate supervisor,
+                  with HR included in the workflow.</li>
+              <li>Directed approved requests to HR for entry into the
+                  attendance-tracking spreadsheet.</li>
+              <li>Replaced paper handoffs with structured approval
+                  and recordkeeping.</li>
+            </ul>
+
+            <h4>Outcome</h4>
+            <p>
+              The workflow reduced paper usage and helped address lost
+              requests, missing records, approval follow-up and manual
+              reprocessing. It also reduced the administrative workload
+              associated with handling these requests in HR.
+            </p>
+          </div>
+
+          <aside class="aside">
+            <h4>Workflow Overview</h4>
+            <div class="metric"><strong>01 · Employee</strong><span>Submits a permission request in Teams</span></div>
+            <div class="metric"><strong>02 · Supervisor</strong><span>Receives and reviews the request</span></div>
+            <div class="metric"><strong>03 · Human Resources</strong><span>Receives approved requests and records them</span></div>
+
+            <h4>Key Improvements</h4>
+            <ul class="bullets">
+              <li>Less paper handling</li>
+              <li>Improved traceability</li>
+              <li>Fewer missing records</li>
+              <li>Less administrative rework</li>
+            </ul>
+            <p class="small">
+              Qualitative results only. No verified time savings
+              or percentage reductions are available.
+            </p>
+          </aside>
+        </div>
+        <p class="small">
+          This case is documented through a process description.
+          No internal HR records or employee information are displayed.
+        </p>
+      </div>
+    </article>
+
+    <!-- SALUR BIOPSY NEEDLES -->
+    <article class="case">
+      <div class="case-header">
+        <span class="label">03 · Healthcare Marketing</span>
+        <h3>Medical Education & Biopsy Needle Workshops</h3>
+        <p>Salur SRL · Product Education & Event Coordination</p>
+        <div class="tags">
+          <span class="tag">Healthcare Marketing</span>
+          <span class="tag">Event Coordination</span>
+          <span class="tag">Product Education</span>
+        </div>
+      </div>
+
+      <div class="case-content">
+        <div class="case-grid">
+          <div>
+            <h4>Project Overview</h4>
+            <p>
+              Salur supported medical education sessions designed to
+              familiarize healthcare professionals with the proper use
+              of its biopsy needles. The initiative began with Caja
+              Petrolera in La Paz and was subsequently replicated in
+              Oruro, Santa Cruz and Cochabamba.
+            </p>
+
+            <h4>My Role</h4>
+            <p>
+              Working alongside the product line manager, who coordinated
+              the medical education initiative, I handled marketing and
+              event-support activities.
+            </p>
+
+            <ul class="bullets">
+              <li>Coordinated event logistics and materials.</li>
+              <li>Ensured promotional resources and refreshments were available.</li>
+              <li>Photographed and documented the sessions.</li>
+              <li>Prepared social media content to communicate the initiative.</li>
+            </ul>
+
+            <h4>Observed Outcome</h4>
+            <p>
+              The initial session in La Paz involved approximately six
+              to seven doctors from the relevant specialty. After the
+              event was shared on social media, interest emerged in
+              holding similar sessions in other cities. The initiative
+              was subsequently replicated in three additional cities.
+            </p>
+
+            <p>
+              Available product sales data can be used to examine
+              commercial performance before and after the workshops,
+              while distinguishing observed changes from proven causation.
+            </p>
+          </div>
+
+          <aside class="aside">
+            <h4>Initiative Snapshot</h4>
+            <div class="metric-grid">
+              <div class="metric"><strong>4</strong><span>Cities involved</span></div>
+              <div class="metric"><strong>~6–7</strong><span>Doctors at initial session</span></div>
+              <div class="metric"><strong>April</strong><span>Approximate starting month; year to confirm</span></div>
+            </div>
+            <h4>Key Takeaway</h4>
+            <p>
+              Social media documentation helped generate interest in
+              replicating the educational activity across additional regions.
+            </p>
+            <p class="small">
+              Clinical training was coordinated by the product line
+              manager and healthcare partners, not presented as my role.
+            </p>
+          </aside>
+        </div>
+
+        <h4>Workshop Gallery</h4>
+        <p class="small">
+          Add authorized event photographs showing training,
+          product demonstration and professional interaction.
+        </p>
+
+        <div class="gallery">
+          <div class="placeholder">La Paz · Initial workshop</div>
+          <div class="placeholder">Product demonstration</div>
+          <div class="placeholder">Medical education session</div>
+        </div>
+
+        <h4>Commercial Performance</h4>
+        <p>
+          Use verified sales figures to compare equivalent periods
+          before and after the workshops.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Indicator</th>
+                <th>Before workshops</th>
+                <th>After workshops</th>
+                <th>Change</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Units sold</td>
+                <td>[Add data]</td>
+                <td>[Add data]</td>
+                <td>[Calculate]</td>
+              </tr>
+              <tr>
+                <td>Sales revenue (BOB)</td>
+                <td>[Add data]</td>
+                <td>[Add data]</td>
+                <td>[Calculate]</td>
+              </tr>
+              <tr>
+                <td>Comparison period</td>
+                <td>[Start–end date]</td>
+                <td>[Start–end date]</td>
+                <td>Use comparable periods</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="small">
+          Replace every placeholder before publishing. An increase after
+          the workshops does not by itself prove that the workshops caused
+          the increase. Consider stock availability, pricing, other
+          promotions and seasonality when interpreting the data.
+        </p>
+      </div>
+    </article>
+
+    <!-- BANCO BISA -->
+    <article class="case">
+      <div class="case-header">
+        <span class="label">04 · Operational Improvement</span>
+        <h3>Paper Consumption Reduction</h3>
+        <p>Banco BISA S.A. · Continuous Improvement Internship</p>
+      </div>
+      <div class="case-content">
+        <p>
+          Participated in a continuous improvement initiative focused
+          on reducing paper consumption. This experience contributed
+          to my understanding of operational efficiency and
+          resource-conscious work practices.
+        </p>
+        <p class="small">
+          Brief experience summary: detailed project scope and
+          quantified results have not been confirmed.
+        </p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- WEBSITES -->
+<section class="section white" id="web-projects">
+  <div class="container">
+    <p class="eyebrow">Digital Projects</p>
+    <h2>Websites & Digital Platforms</h2>
+    <p class="intro">
+      Website design, page layout and digital platform experience
+      across corporate and healthcare-related brands.
+    </p>
+
+    <div class="grid-2">
+
+      <article class="card">
+        <div class="browser-wrap">
+          <div class="browser">
+            <div class="browser-top">salursrl.com · Odoo</div>
+            <div class="browser-screen">
+              <div class="browser-line"></div>
+              <div class="browser-line short"></div>
+              <div class="browser-block"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="label">Odoo · Corporate Website</span>
+          <h3>Salur SRL</h3>
+          <p>
+            Corporate website design, page layout and management for
+            a B2B medical equipment and supplies distributor.
+          </p>
+          <a class="link" href="http://salursrl.com/" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="browser-wrap">
+          <div class="browser">
+            <div class="browser-top">COFAR · WordPress brand websites</div>
+            <div class="browser-screen">
+              <div class="browser-line short"></div>
+              <div class="browser-line"></div>
+              <div class="browser-block"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="label">WordPress · Brand Websites</span>
+          <h3>COFAR Digital Presence</h3>
+          <p>
+            Website design and page layout for product and brand
+            websites within the pharmaceutical environment.
+          </p>
+          <div class="web-links">
+            <a href="https://dextroamin.com.bo/" target="_blank" rel="noopener noreferrer">Dextroamin ↗</a>
+            <a href="https://breskotpharma.com/" target="_blank" rel="noopener noreferrer">Breskot Pharma ↗</a>
+            <a href="https://fortier.com.bo/" target="_blank" rel="noopener noreferrer">Fortier ↗</a>
+            <a href="https://flavicold.com.bo/" target="_blank" rel="noopener noreferrer">Flavicold ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="browser-wrap">
+          <div class="browser">
+            <div class="browser-top">Digital commerce · Private project</div>
+            <div class="browser-screen">
+              <div class="browser-line"></div>
+              <div class="browser-block"></div>
+              <div class="browser-line short"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="label">Digital Platform</span>
+          <h3>COFAR E-commerce</h3>
+          <p>
+            Experience contributing to a digital commerce platform.
+            The project is not displayed publicly because its current
+            status and authorization to share materials are unconfirmed.
+          </p>
+          <p class="small">Private project · No internal screenshots displayed.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="browser-wrap">
+          <div class="browser">
+            <div class="browser-top">Website design & layout</div>
+            <div class="browser-screen">
+              <div class="browser-line short"></div>
+              <div class="browser-line"></div>
+              <div class="browser-block"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="label">Web Operations</span>
+          <h3>Design, Layout & Content Management</h3>
+          <p>
+            Managing web content, organizing page structures and
+            coordinating digital information for corporate and
+            product-focused websites.
+          </p>
+          <p class="small">Platform experience includes WordPress and Odoo.</p>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="small" style="margin-top:20px">
+      Website links are project references. Some sites may have changed
+      since the original work. Ensure the work shown accurately reflects
+      your contribution and is appropriate for public display.
+    </p>
+  </div>
+</section>
+
+<!-- MARKETING -->
+<section class="section" id="marketing">
+  <div class="container">
+    <p class="eyebrow">Marketing & Communication</p>
+    <h2>Digital Marketing Projects</h2>
+    <p class="intro">
+      Planning and executing digital communication, developing creative
+      assets and supporting paid campaigns across healthcare and
+      service-sector brands.
+    </p>
+
+    <div class="grid-2">
+
+      <!-- SALUR SOCIAL -->
+      <article class="card">
+        <!-- Replace with <img src="assets/salur-cover.jpg" alt="Salur campaign"> -->
+        <div class="placeholder" style="border:0;border-radius:0">Salur campaign cover image</div>
+
+        <div class="card-body">
+          <span class="label">Healthcare Marketing</span>
+          <h3>Salur SRL — National Marketing</h3>
+          <p>
+            National marketing coordination, corporate positioning,
+            content planning, graphic assets, Facebook and Instagram
+            advertising, medical communication and event promotion.
+          </p>
+
+          <ul class="bullets">
+            <li>Content planning and publication coordination</li>
+            <li>Graphic and promotional material development</li>
+            <li>Paid social campaign support</li>
+            <li>Medical education and product communication</li>
+          </ul>
+
+          <div class="social-links">
+            <a href="https://www.facebook.com/salursrl" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+            <a href="https://www.instagram.com/salur_srl/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+          </div>
+
+          <h4>Selected Work</h4>
+          <div class="gallery">
+            <div class="placeholder">Product campaign</div>
+            <div class="placeholder">Medical education post</div>
+            <div class="placeholder">Event communication</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- TAXTAG SOCIAL -->
+      <article class="card">
+        <!-- Replace with <img src="assets/taxtag-cover.jpg" alt="TaxTag campaign"> -->
+        <div class="placeholder" style="border:0;border-radius:0">TaxTag campaign cover image</div>
+
+        <div class="card-body">
+          <span class="label">Digital Marketing</span>
+          <h3>TaxTag Service</h3>
+          <p>
+            Digital marketing support focused on social media communication,
+            campaign execution and website management.
+          </p>
+
+          <ul class="bullets">
+            <li>Facebook and Instagram content planning</li>
+            <li>Graphic design and campaign assets</li>
+            <li>Paid advertising on Facebook, Instagram and Google</li>
+            <li>Website updates and performance monitoring</li>
+          </ul>
+
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61585933629630" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+            <a href="https://www.instagram.com/taxtagva" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+          </div>
+
+          <h4>Selected Work</h4>
+          <div class="gallery">
+            <div class="placeholder">Social media design</div>
+            <div class="placeholder">Campaign creative</div>
+            <div class="placeholder">Brand communication</div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="section white">
+  <div class="container">
+    <p class="eyebrow">What I Bring</p>
+    <h2>Additional Capabilities</h2>
+    <p class="intro">
+      A multidisciplinary background combining coordination,
+      analytical thinking, process management and digital execution.
+    </p>
+
+    <div class="grid-3">
+      <article class="card">
+        <div class="card-body">
+          <span class="label">01 · Operations</span>
+          <h3>Marketing Operations</h3>
+          <p>
+            Coordinating content, campaigns, stakeholders, promotional
+            materials and marketing activities across teams and locations.
+          </p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <span class="label">02 · Project Management</span>
+          <h3>Project Coordination</h3>
+          <p>
+            Organizing deliverables, resources, schedules, communication
+            and execution to keep projects structured and moving forward.
+          </p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <span class="label">03 · Improvement</span>
+          <h3>Process Improvement</h3>
+          <p>
+            Identifying workflow issues, documenting processes and
+            developing practical improvements to reduce unnecessary
+            manual work.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container">
+    <p class="eyebrow">About Me</p>
+    <h2>Strategy, Structure & Execution</h2>
+
+    <div class="about-grid">
+      <div>
+        <p>
+          I am a Business Administration graduate with a multidisciplinary
+          background in marketing, process improvement, management systems
+          and digital projects.
+        </p>
+
+        <p>
+          My experience in healthcare has strengthened my interest in
+          organizations whose work contributes to people's well-being.
+          I enjoy bringing structure to complex activities, coordinating
+          people and resources, and identifying practical ways to improve
+          how work gets done.
+        </p>
+
+        <p>
+          I am particularly interested in roles where project coordination,
+          operational organization and analytical thinking meet marketing
+          and digital transformation.
+        </p>
+      </div>
+
+      <div>
+        <div class="skill-group">
+          <h3>Project & Operations</h3>
+          <div class="skill-tags">
+            <span>Project Coordination</span>
+            <span>Workflow Management</span>
+            <span>Process Mapping</span>
+            <span>Continuous Improvement</span>
+            <span>Documentation</span>
+            <span>Stakeholder Coordination</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Marketing & Digital</h3>
+          <div class="skill-tags">
+            <span>Marketing Operations</span>
+            <span>Content Planning</span>
+            <span>Paid Social Campaigns</span>
+            <span>WordPress</span>
+            <span>Odoo</span>
+            <span>Website Management</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Management & Tools</h3>
+          <div class="skill-tags">
+            <span>Microsoft 365</span>
+            <span>Microsoft Teams Approvals</span>
+            <span>Management Systems</span>
+            <span>ISO Audit Support</span>
+            <span>Data Analysis</span>
+            <span>Business Administration</span>
+          </div>
+        </div>
+
+        <p class="small">
+          Academic background: Business Administration. Academic average:
+          94.6/100, with academic recognition throughout the four-year program.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section white" id="contact">
+  <div class="container">
+    <div class="contact-panel">
+      <div>
+        <p class="eyebrow" style="color:#c3d7e8">Get in Touch</p>
+        <h2>Let's organize your next project.</h2>
+        <p>
+          If you need support with marketing operations, project coordination,
+          workflow improvement or digital initiatives, I'd be happy to connect.
+        </p>
+      </div>
+
+      <div>
+        <!-- Replace # with your real Upwork profile URL -->
+        <a class="button" href="#" target="_blank" rel="noopener noreferrer">
+          View My Upwork Profile ↗
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Fabian Balboa Quinteros · Professional Portfolio
+  </div>
+</footer>
 
 </body>
 </html>
+
