@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional portfolio in marketing operations, project coordination, continuous improvement and business process analysis.">
+  <title>Professional Portfolio | Marketing & Business Operations</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --ink: #172338;
+      --muted: #667085;
+      --accent: #3976d4;
+      --line: #e3e8ef;
+      --soft: #edf3fc;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1080px, 90%); margin: auto; }
+
+    header {
+      background: rgba(255,255,255,.94);
+      border-bottom: 1px solid var(--line);
+    }
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand { font-weight: 800; letter-spacing: -.5px; }
+    .brand span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; font-size: .9rem; }
+    .nav-links a:hover, .text-link:hover { color: var(--accent); }
+
+    .hero { padding: 100px 0 84px; }
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      font-size: .76rem;
+      letter-spacing: 2px;
+      font-weight: 800;
+    }
+    h1 {
+      max-width: 850px;
+      font-size: clamp(2.7rem, 6vw, 5rem);
+      line-height: 1.08;
+      letter-spacing: -3px;
+      margin: 20px 0;
+    }
+    h1 span { color: var(--accent); }
+    .intro { max-width: 690px; color: var(--muted); font-size: 1.12rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 7px;
+      font-weight: 700;
+      font-size: .92rem;
+      border: 1px solid var(--ink);
+    }
+    .primary { background: var(--ink); color: white; }
+    .primary:hover { background: var(--accent); border-color: var(--accent); }
+    .secondary { background: transparent; }
+    .secondary:hover { background: var(--surface); }
+
+    .focus-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--line);
+      background: var(--surface);
+      border-radius: 12px;
+      margin-top: 20px;
+      overflow: hidden;
+    }
+    .focus-item { padding: 22px 18px; border-right: 1px solid var(--line); }
+    .focus-item:last-child { border-right: 0; }
+    .focus-item strong { display: block; font-size: .95rem; }
+    .focus-item span { color: var(--muted); font-size: .8rem; }
+
+    section { padding: 76px 0; }
+    .section-heading { margin-bottom: 30px; }
+    .section-heading h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); margin: 8px 0; letter-spacing: -1px; }
+    .section-heading p { color: var(--muted); max-width: 650px; margin: 0; }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+    .project {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 28px;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .project:hover { transform: translateY(-3px); box-shadow: 0 12px 32px #1723380c; }
+    .project-number { color: var(--accent); font-weight: 800; font-size: .8rem; }
+    .project h3 { font-size: 1.25rem; line-height: 1.4; margin: 12px 0 8px; }
+    .project p { color: var(--muted); font-size: .94rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+    .tag { background: var(--soft); color: #28558e; border-radius: 4px; padding: 5px 9px; font-size: .75rem; }
+
+    .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: start; }
+    .about-copy p { color: var(--muted); }
+    .principles { display: grid; gap: 12px; }
+    .principle { padding: 17px 20px; border: 1px solid var(--line); background: var(--surface); border-radius: 9px; }
+    .principle strong { display: block; }
+    .principle span { font-size: .9rem; color: var(--muted); }
+
+    .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skill { padding: 9px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; font-size: .9rem; }
+
+    .contact-panel {
+      background: #172338;
+      color: white;
+      border-radius: 14px;
+      padding: clamp(28px, 5vw, 56px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 28px;
+    }
+    .contact-panel h2 { font-size: clamp(1.8rem, 4vw, 2.7rem); line-height: 1.2; margin: 8px 0 12px; }
+    .contact-panel p { color: #c5cfdd; max-width: 560px; }
+    .contact-panel .button { color: white; border-color: #8294ad; white-space: nowrap; }
+    .contact-panel .button:hover { background: var(--accent); border-color: var(--accent); }
+    footer { padding: 28px 0; color: var(--muted); font-size: .84rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+
+    @media (max-width: 720px) {
+      .nav-links { gap: 12px; font-size: .8rem; }
+      .hero { padding: 68px 0 55px; }
+      h1 { letter-spacing: -1.5px; }
+      .focus-strip { grid-template-columns: repeat(2, 1fr); }
+      .focus-item:nth-child(2) { border-right: 0; }
+      .focus-item:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .projects, .about-grid { grid-template-columns: 1fr; }
+      .contact-panel { align-items: flex-start; flex-direction: column; }
+    }
+    @media (max-width: 430px) {
+      .brand { font-size: .9rem; }
+      .nav-links { gap: 9px; }
+      .nav-links a { font-size: .76rem; }
+      .project { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="container">
+      <a class="brand" href="#home">PORTFOLIO<span>.</span></a>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#skills">Expertise</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div class="eyebrow">Marketing · Projects · Business Operations</div>
+      <h1>Turning business challenges into <span>organized, measurable progress.</span></h1>
+      <p class="intro">
+        Business Administration professional focused on marketing operations,
+        project coordination, continuous improvement and data-informed decision-making.
+        I connect strategy with structured execution to help teams work better.
+      </p>
+      <div class="actions">
+        <a class="button primary" href="#projects">Explore my projects ↗</a>
+        <a class="button secondary" href="#contact">Let's connect</a>
+      </div>
+
+      <div class="focus-strip">
+        <div class="focus-item">
+          <strong>Marketing</strong>
+          <span>Strategy & operations</span>
+        </div>
+        <div class="focus-item">
+          <strong>Project Management</strong>
+          <span>Planning & coordination</span>
+        </div>
+        <div class="focus-item">
+          <strong>Process Improvement</strong>
+          <span>Workflows & quality</span>
+        </div>
+        <div class="focus-item">
+          <strong>Business Analysis</strong>
+          <span>Structured decisions</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Selected work</div>
+          <h2>Projects & Case Studies</h2>
+          <p>
+            A selection of professional experiences across healthcare marketing,
+            business operations and continuous improvement. Detailed case studies
+            will include project context, my contribution and documented deliverables.
+          </p>
+        </div>
+
+        <div class="projects">
+          <article class="project">
+            <div class="project-number">01 / MARKETING STRATEGY</div>
+            <h3>Corporate Marketing & Brand Development</h3>
+            <p>
+              Salur SRL · Healthcare sector
+            </p>
+            <p>
+              National marketing coordination, corporate communication,
+              digital channel management and brand positioning in a
+              business-to-business healthcare environment.
+            </p>
+            <div class="tags">
+              <span class="tag">Marketing Operations</span>
+              <span class="tag">Brand Strategy</span>
+              <span class="tag">Healthcare</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-number">02 / CONTINUOUS IMPROVEMENT</div>
+            <h3>5S Continuous Improvement Proposal</h3>
+            <p>
+              Corporación COFAR S.A. · Business operations
+            </p>
+            <p>
+              Development and company-wide presentation of a 5S improvement
+              proposal addressing commercial, administrative and production areas.
+            </p>
+            <div class="tags">
+              <span class="tag">5S</span>
+              <span class="tag">Process Improvement</span>
+              <span class="tag">Stakeholder Communication</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-number">03 / BUSINESS OPERATIONS</div>
+            <h3>Process Mapping & Workflow Automation</h3>
+            <p>
+              Corporación COFAR S.A. · Process management
+            </p>
+            <p>
+              Experience supporting commercial process analysis, organizational
+              documentation and workflow automation using Microsoft 365.
+            </p>
+            <div class="tags">
+              <span class="tag">Process Mapping</span>
+              <span class="tag">Microsoft 365</span>
+              <span class="tag">Documentation</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-number">04 / PROJECT COORDINATION</div>
+            <h3>Medical Events & Education Coordination</h3>
+            <p>
+              Salur SRL · Healthcare marketing
+            </p>
+            <p>
+              Coordination of medical congresses, workshops, suppliers,
+              promotional materials and educational activities for healthcare
+              professionals.
+            </p>
+            <div class="tags">
+              <span class="tag">Project Coordination</span>
+              <span class="tag">Event Operations</span>
+              <span class="tag">Logistics</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-number">05 / OPERATIONAL EFFICIENCY</div>
+            <h3>Continuous Improvement Project</h3>
+            <p>
+              Banco BISA S.A. · Banking
+            </p>
+            <p>
+              Experience supporting a continuous improvement initiative.
+              The project scope, methods and documented outcomes will be
+              added after the case details are verified.
+            </p>
+            <div class="tags">
+              <span class="tag">Continuous Improvement</span>
+              <span class="tag">Business Analysis</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <div class="eyebrow">About me</div>
+          <h2>Strategy with an operational mindset.</h2>
+          <p>
+            I hold a degree in Business Administration, with a strong academic
+            background and experience across marketing, process management,
+            documentation, quality systems and continuous improvement.
+          </p>
+          <p>
+            My approach combines analytical thinking, organization and clear
+            communication. I enjoy connecting people, processes and information
+            to move projects from planning to execution.
+          </p>
+          <p>
+            I am particularly interested in remote opportunities where I can
+            support international teams through marketing operations,
+            project coordination and business process improvement.
+          </p>
+        </div>
+        <div class="principles">
+          <div class="principle">
+            <strong>Structured execution</strong>
+            <span>Organizing tasks, deliverables and workflows.</span>
+          </div>
+          <div class="principle">
+            <strong>Continuous improvement</strong>
+            <span>Identifying opportunities to improve processes.</span>
+          </div>
+          <div class="principle">
+            <strong>Analytical thinking</strong>
+            <span>Using information to support better decisions.</span>
+          </div>
+          <div class="principle">
+            <strong>Cross-functional coordination</strong>
+            <span>Connecting teams, suppliers and stakeholders.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Core competencies</div>
+          <h2>Skills & Tools</h2>
+          <p>
+            A combination of business, operational and digital capabilities.
+            Tools and proficiency levels will be refined as the portfolio develops.
+          </p>
+        </div>
+        <div class="skills">
+          <span class="skill">Marketing Strategy</span>
+          <span class="skill">Marketing Operations</span>
+          <span class="skill">Project Coordination</span>
+          <span class="skill">Process Mapping</span>
+          <span class="skill">Continuous Improvement</span>
+          <span class="skill">5S Methodology</span>
+          <span class="skill">Business Analysis</span>
+          <span class="skill">Microsoft 365</span>
+          <span class="skill">WordPress</span>
+          <span class="skill">Odoo</span>
+          <span class="skill">Digital Marketing</span>
+          <span class="skill">Documentation Management</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-panel">
+          <div>
+            <div class="eyebrow">Let's work together</div>
+            <h2>Have a project in mind?</h2>
+            <p>
+              I am interested in collaborating on marketing operations,
+              project coordination, process improvement and business support
+              projects with teams looking for structured, reliable execution.
+            </p>
+          </div>
+          <a class="button" href="https://www.upwork.com/" target="_blank" rel="noopener noreferrer">
+            Find me on Upwork ↗
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>Professional Portfolio</span>
+      <span>Marketing · Projects · Business Operations</span>
+    </div>
+  </footer>
+
+</body>
+</html>
